@@ -10,7 +10,7 @@ export default function ClobalError({}: ClobalErrorProps) {
     <html>
       <body>
         <div>
-          <p>Somethind globally went wrongnpm</p>
+          <p>Somethind globally went wrong</p>
           {/* <Button onClick={() => reset()}>Try again</Button> */}
         </div>
       </body>
