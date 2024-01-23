@@ -1,4 +1,5 @@
 import Sidebar from '@/app/components/sidebar';
+import { log } from 'console';
 import React from 'react';
 
 export interface LayoutProps {
@@ -6,6 +7,8 @@ export interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+  console.log('rendering');
+
   return (
     <>
       <Sidebar />
