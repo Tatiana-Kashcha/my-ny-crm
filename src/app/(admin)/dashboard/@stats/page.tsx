@@ -12,7 +12,7 @@ const labelByStat: Record<keyof SummaryStats, string> = {
 };
 
 export default async function Page({}: PageProps) {
-  const data = await getSummaryStats();
+  // const data = await getSummaryStats();
 
   return (
     <div className="grid grid-cols-12 gap-5">
@@ -21,7 +21,8 @@ export default async function Page({}: PageProps) {
           <StatCard
             type={StatCardType.Gradient}
             label={labelByStat[key]}
-            counter={data[key]}
+            counter={7}
+            // counter={data[key]}
           />
         </div>
       ))}

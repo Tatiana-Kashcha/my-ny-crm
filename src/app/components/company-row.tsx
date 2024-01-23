@@ -41,7 +41,8 @@ export default function CompanyRow({ company }: CompanyRowProps) {
       </td>
       <td>{company.countryTitle}</td>
       <td className="rounded-r">
-        {new Date(company.joinedDate).toLocaleDateString('uk-UA')}
+        {/* {new Date(company.joinedDate).toLocaleDateString('uk-UA')} */}
+        {new Date().toLocaleDateString('uk-UA')}
       </td>
     </tr>
   );

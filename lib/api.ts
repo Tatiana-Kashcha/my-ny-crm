@@ -30,18 +30,29 @@ export enum CompanyStatus {
   Suspended = 'suspended',
 }
 
+// export interface Company {
+//   id: string;
+//   title: string;
+//   description: string;
+//   status: CompanyStatus;
+//   joinedDate: string;
+//   hasPromotions: boolean;
+//   categoryId: string;
+//   categoryTitle: string;
+//   countryId: string;
+//   countryTitle: string;
+//   avatar?: string;
+// }
+
 export interface Company {
   id: string;
   title: string;
-  description: string;
   status: CompanyStatus;
   joinedDate: string;
   hasPromotions: boolean;
   categoryId: string;
   categoryTitle: string;
-  countryId: string;
   countryTitle: string;
-  avatar?: string;
 }
 
 export interface Promotion {
@@ -75,21 +86,8 @@ export const getSummaryStats = (init?: RequestInit) => {
   return sendRequest<SummaryStats>(buildUrl('summary-stats', '1'), init);
 };
 
-// export const getSummarySales = (init?: RequestInit) => {
-//   return sendRequest<SummarySales[]>(buildUrl('summary-sales'), init);
-// };
-
-export const getSummarySales = () => {
-  const items = [];
-  for (let i = 0; 1 < 6; i++) {
-    items.push({
-      companyId: i + 1,
-      companyTitle: 'Costco Wholesale',
-      sold: 459,
-      income: 600,
-    });
-  }
-  return Promise.resolve(items);
+export const getSummarySales = (init?: RequestInit) => {
+  return sendRequest<SummarySales[]>(buildUrl('summary-sales'), init);
 };
 
 export const getCountries = (init?: RequestInit) => {

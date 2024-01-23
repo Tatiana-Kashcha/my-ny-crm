@@ -16,6 +16,53 @@ const headers = [
   'Joined date',
 ];
 
+const data = [
+  {
+    id: '1',
+    title: 'Ukraine',
+    status: 'active',
+    joinedDate: '23.01.2024',
+    hasPromotions: true,
+    companyTitle: 'UkraineCompany',
+    categoryTitle: 'Product',
+    countryTitle: 'Ukraine',
+    categoryId: '13',
+  },
+  {
+    id: '2',
+    title: 'Canada',
+    status: 'notActive',
+    joinedDate: '23.01.2024',
+    hasPromotions: false,
+    companyTitle: 'CanadaCompany',
+    categoryTitle: 'Product',
+    countryTitle: 'Canada',
+    categoryId: '13',
+  },
+  {
+    id: '3',
+    title: 'Italia',
+    status: 'pending',
+    joinedDate: '23.01.2024',
+    hasPromotions: false,
+    companyTitle: 'ItaliaCompany',
+    categoryTitle: 'Product',
+    countryTitle: 'Italia',
+    categoryId: '13',
+  },
+  {
+    id: '4',
+    title: 'USA',
+    status: 'suspended',
+    joinedDate: '23.01.2024',
+    hasPromotions: true,
+    companyTitle: 'USACompany',
+    categoryTitle: 'Product',
+    countryTitle: 'USA',
+    categoryId: '13',
+  },
+];
+
 export default function CompanyTable({}: CompanyTableProps) {
   // const { data } = useQuery({
   //   queryKey: ['companies'],
@@ -36,9 +83,9 @@ export default function CompanyTable({}: CompanyTableProps) {
           </tr>
         </thead>
         <tbody>
-          {/* {data?.map((company) => (
+          {data?.map((company) => (
             <CompanyRow key={company.id} company={company} />
-          ))} */}
+          ))}
         </tbody>
       </table>
     </div>
