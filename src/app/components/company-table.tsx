@@ -1,9 +1,10 @@
 'use client';
 
 import React from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { getCompanies } from '../../../lib/api';
+// import { useQuery } from '@tanstack/react-query';
+// import { getCompanies } from '../../../lib/api';
 import CompanyRow from './company-row';
+import { CompanyStatus } from '../../../lib/api';
 
 export interface CompanyTableProps {}
 
@@ -19,47 +20,43 @@ const headers = [
 const data = [
   {
     id: '1',
-    title: 'Ukraine',
-    status: 'active',
+    title: 'UkraineCompany',
+    status: CompanyStatus.Active,
     joinedDate: '23.01.2024',
     hasPromotions: true,
     companyTitle: 'UkraineCompany',
     categoryTitle: 'Product',
     countryTitle: 'Ukraine',
-    categoryId: '13',
   },
   {
     id: '2',
-    title: 'Canada',
-    status: 'notActive',
+    title: 'CanadaCompany',
+    status: CompanyStatus.NotActive,
     joinedDate: '23.01.2024',
     hasPromotions: false,
     companyTitle: 'CanadaCompany',
     categoryTitle: 'Product',
     countryTitle: 'Canada',
-    categoryId: '13',
   },
   {
     id: '3',
-    title: 'Italia',
-    status: 'pending',
+    title: 'ItaliaCompany',
+    status: CompanyStatus.Pending,
     joinedDate: '23.01.2024',
     hasPromotions: false,
     companyTitle: 'ItaliaCompany',
     categoryTitle: 'Product',
     countryTitle: 'Italia',
-    categoryId: '13',
   },
   {
     id: '4',
-    title: 'USA',
-    status: 'suspended',
+    title: 'USACompany',
+    status: CompanyStatus.Suspended,
     joinedDate: '23.01.2024',
     hasPromotions: true,
     companyTitle: 'USACompany',
     categoryTitle: 'Product',
     countryTitle: 'USA',
-    categoryId: '13',
   },
 ];
 

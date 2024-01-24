@@ -44,13 +44,13 @@ export enum CompanyStatus {
 //   avatar?: string;
 // }
 
+//це новий для тесту
 export interface Company {
   id: string;
   title: string;
   status: CompanyStatus;
   joinedDate: string;
   hasPromotions: boolean;
-  categoryId: string;
   categoryTitle: string;
   countryTitle: string;
 }
