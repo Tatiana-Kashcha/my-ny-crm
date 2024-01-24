@@ -4,7 +4,7 @@ import Toolbar from '../../components/toolbar';
 import SearchInput from '../../components/search-input';
 import AddCompanyButton from '../../components/add-company-button';
 import CompanyTable from '../../components/company-table';
-
+import AddCompanyButtonCopy from '@/app/components/add-company-button copy';
 
 export interface PageProps {}
 export default function Page({}: PageProps) {
@@ -13,6 +13,7 @@ export default function Page({}: PageProps) {
       <Header>Companies</Header>
       <Toolbar action={<AddCompanyButton />}>
         <SearchInput />
+        <AddCompanyButtonCopy />
       </Toolbar>
       <CompanyTable />
     </>
